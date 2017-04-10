@@ -1,5 +1,7 @@
+import "url";
 import {Options} from "./Options";
 import {Translator} from "./Translator";
+
 export class Router{
 	private static http_build_query (formdata:any, numericPrefix?:string, argSeparator?:string):string{
 		let _httpBuildQueryHelper = function (key:string, val:any, argSeparator:string):string{
@@ -116,5 +118,10 @@ export class Router{
 			url += '?'+query;
 		}
 		return url;
+	}
+	public static getAjaxFormURL(link:string) :string {
+		let url = new URL(link);
+		url.searchparams.set('ajax', "1");
+		return url.toString();
 	}
 }

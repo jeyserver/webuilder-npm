@@ -1,13 +1,13 @@
 {
     "files": [
-		"index.ts",
-        "src/ts/Options.ts",
-		"src/ts/Router.ts",
-		"src/ts/Translator.ts"
+			"index.ts",
+			"src/ts/Options.ts",
+			"src/ts/Router.ts",
+			"src/ts/Translator.ts"
     ],
-    "compilerOptions": {
+	"compilerOptions": {
 		"module": "commonjs",
-   		"target": "es5",
+		"target": "es5",
 		"sourceMap": false,
 		"removeComments": true,
 		"declaration":true
