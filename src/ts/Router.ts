@@ -121,7 +121,8 @@ export class Router{
 	}
 	public static getAjaxFormURL(link:string) :string {
 		let url = new URL(link);
-		url.searchparams.set('ajax', "1");
+		// https://github.com/Microsoft/TypeScript/issues/14399
+		(url as any).searchparams.set('ajax', "1");
 		return url.toString();
 	}
 }
