@@ -1,4 +1,4 @@
-import "url";
+import * as url from "url";
 import {Options} from "./Options";
 import {Translator} from "./Translator";
 
@@ -120,9 +120,13 @@ export class Router{
 		return url;
 	}
 	public static getAjaxFormURL(link:string) :string {
-		let url = new URL(link);
-		// https://github.com/Microsoft/TypeScript/issues/14399
-		(url as any).searchparams.set('ajax', "1");
-		return url.toString();
+		let resolvedLink = link;
+		if(resolvedLink.substr(0, 4) != 'http'){
+			resolvedLink = url.resolve(location.href, resolvedLink);
+		}
+		let URL = url.parse(resolvedLink, true);
+		URL.search = '';
+		URL.query.ajax = 1;
+		return URL.format();
 	}
 }
