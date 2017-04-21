@@ -10,7 +10,7 @@ export namespace webuilder{
 		error?:	AjaxError[];
 	}
 	export interface AjaxError{
-		input:string;
+		input?:string;
 		error:error;
 		type:errorType;
 	}
