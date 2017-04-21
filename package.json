@@ -1,6 +1,6 @@
 {
   "name": "webuilder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "frontend kit for typescript and javascript",
   "homepage": "https://git.jeyserver.com/webuilder/npm",
   "license": "MIT",
@@ -16,12 +16,18 @@
     "type": "git",
     "url": "git+https://git.jeyserver.com/webuilder/npm.git"
   },
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "typescript": "^2.2.1",
+    "jquery": "^3.2.1",
     "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.41",
+    "@types/node": "^7.0.13",
+    "typescript": "^2.2.1"
   }
 }

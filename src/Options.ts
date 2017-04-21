@@ -1,5 +1,5 @@
 declare var options: any;
-export class Options{
+export default class Options{
 	public static set(key :string, value:any){
 		options[key] = value;
 	}

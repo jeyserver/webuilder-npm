@@ -1,8 +1,12 @@
 import * as url from "url";
-import {Options} from "./Options";
-import {Translator} from "./Translator";
-
-export class Router{
+import Options from "./Options";
+import Translator from "./Translator";
+declare module "url"{
+	interface Url{
+		format():string;
+	}
+}
+export default class Router{
 	private static http_build_query (formdata:any, numericPrefix?:string, argSeparator?:string):string{
 		let _httpBuildQueryHelper = function (key:string, val:any, argSeparator:string):string{
 			let k;

@@ -1,15 +1,18 @@
 {
     "files": [
-			"index.ts",
-			"src/ts/Options.ts",
-			"src/ts/Router.ts",
-			"src/ts/Translator.ts"
+		"src/index.ts",
+		"src/webuilder.ts",
+		"src/Options.ts",
+		"src/Router.ts",
+		"src/Translator.ts",
+		"src/AjaxRequest.ts"
     ],
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "es5",
 		"sourceMap": false,
 		"removeComments": true,
-		"declaration":true
+		"declaration":true,
+		"outDir": "dist"
     }
 }
