@@ -1,11 +1,6 @@
 import * as url from "url";
 import Options from "./Options";
 import Translator from "./Translator";
-declare module "url"{
-	interface Url{
-		format():string;
-	}
-}
 export default class Router{
 	private static http_build_query (formdata:any, numericPrefix?:string, argSeparator?:string):string{
 		let _httpBuildQueryHelper = function (key:string, val:any, argSeparator:string):string{
@@ -128,7 +123,7 @@ export default class Router{
 		if(resolvedLink.substr(0, 4) != 'http'){
 			resolvedLink = url.resolve(location.href, resolvedLink);
 		}
-		let URL = url.parse(resolvedLink, true);
+		let URL:any = url.parse(resolvedLink, true);
 		URL.search = '';
 		URL.query.ajax = 1;
 		return URL.format();
