@@ -5,7 +5,8 @@
 		"src/Options.ts",
 		"src/Router.ts",
 		"src/Translator.ts",
-		"src/AjaxRequest.ts"
+		"src/AjaxRequest.ts",
+		"src/formAjax.ts"
     ],
 	"compilerOptions": {
 		"module": "commonjs",
