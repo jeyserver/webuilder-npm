@@ -2,6 +2,9 @@ import * as $ from "jquery";
 import {webuilder} from "./webuilder";
 import Router from "./Router";
 import {AjaxRequest} from "./AjaxRequest";
+export interface JQuery{
+	formAjax(settings: webuilder.AjaxSettings):void;
+}
 $.fn.formAjax = function(settings: webuilder.AjaxSettings){
 	var $this = $(this);
 	let $btn = $('[type=submit]', $this);
