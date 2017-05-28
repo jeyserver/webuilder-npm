@@ -37,7 +37,7 @@ export default class Router{
 			if (numericPrefix) {
 				key = String(numericPrefix) + key;
 			}
-			var query = _httpBuildQueryHelper(key, value, argSeparator);
+			let query = _httpBuildQueryHelper(key, value, argSeparator);
 			if (query !== '') {
 				tmp.push(query);
 			}
@@ -62,9 +62,9 @@ export default class Router{
 				page = page.substr(0, length - 1);
 			}
 		}
-		var url = '';
+		let url = '';
 		if(absolute == true){
-			var hostname = window.location.hostname;
+			let hostname = window.location.hostname;
 			if(parameters.hasOwnProperty('hostname')){
 				hostname = parameters.hostname;
 				delete parameters.hostname;
@@ -72,10 +72,10 @@ export default class Router{
 			url += window.location.protocol+'//'+hostname;
 		}
 
-		var changelang = Options.get('packages.base.translator.changelang');
-		var type = Options.get('packages.base.translator.changelang.type');
+		let changelang = Options.get('packages.base.translator.changelang');
+		let type = Options.get('packages.base.translator.changelang.type');
 		if(changelang == 'uri'){
-			var lang = '';
+			let lang = '';
 			if(parameters.hasOwnProperty('lang')){
 				lang = parameters.lang;
 				delete parameters.lang;
