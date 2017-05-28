@@ -10,6 +10,9 @@ export function AjaxRequest(settings: webuilder.AjaxSettings ){
 			newSettings[key] = settings[key];
 		}
 	}
+	if(typeof newSettings.url == 'string' && newSettings.url.substr(0, 5) != 'http:' && newSettings.url.substr(0, 6) != 'https:' && newSettings.url.substr(0, 1) != '/'){
+		newSettings.url = Router.url(newSettings.url);	
+	}
 	newSettings.success = (data:webuilder.AjaxResponse, textStatus, JqXHR) => {
 		if(data.status){
 			if(settings.hasOwnProperty('success')){
