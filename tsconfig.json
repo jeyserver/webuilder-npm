@@ -1,12 +1,13 @@
 {
     "files": [
 		"index.ts",
-		"webuilder.ts",
 		"Options.ts",
 		"Router.ts",
 		"Translator.ts",
 		"AjaxRequest.ts",
-		"formAjax.ts"
+		"formAjax.ts",
+		"formAjaxJQuery.d.ts",
+		"typings.d.ts"
     ],
 	"compilerOptions": {
 		"module": "commonjs",
