@@ -83,7 +83,7 @@ export default class Router{
 		const URL: any = url.parse(resolvedLink, true);
 		URL.search = "";
 		URL.query.ajax = 1;
-		return URL.format();
+		return url.format(URL);
 	}
 	private static http_build_query(formdata: any, numericPrefix?: string, argSeparator?: string): string{
 		const httpBuildQueryHelper = (key: string, val: any, argumentSeparator: string): string => {
