@@ -29,5 +29,21 @@
     "@types/jquery": "^2.0.41",
     "@types/node": "^7.0.13",
     "typescript": "^2.2.1"
-  }
+  },
+  "files":[
+    "AjaxRequest.d.ts",
+    "AjaxRequest.js",
+    "formAjax.d.ts",
+    "formAjax.js",
+    "index.d.ts",
+    "index.js",
+    "Options.d.ts",
+    "Options.js",
+    "Router.d.ts",
+    "Router.js",
+    "Translator.d.ts",
+    "Translator.js",
+    "webuilder.d.ts",
+    "webuilder.js"
+  ]
 }
