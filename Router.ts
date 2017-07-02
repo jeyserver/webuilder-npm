@@ -126,6 +126,6 @@ export default class Router{
 		let URL:any = url.parse(resolvedLink, true);
 		URL.search = '';
 		URL.query.ajax = 1;
-		return URL.format();
+		return url.format(URL);
 	}
 }
